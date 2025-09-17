@@ -1,0 +1,80 @@
+:root {
+  --base-font: 16px;
+  --bg: #0b1220;
+  --card: #0f2840;
+  --accent: #ff8a00;
+  --text: #ffffff;
+  --muted: #cfe3ff;
+}
+
+* { box-sizing: border-box; }
+html { font-family: Inter, system-ui, Arial, sans-serif; font-size: var(--base-font); }
+body { margin: 0; background: var(--bg); color: var(--text); line-height: 1.4; }
+
+.skip-link {
+  position: absolute; left: -999px; top: auto; width: 1px; height: 1px; overflow: hidden;
+}
+.skip-link:focus {
+  left: 1rem; top: 1rem; width: auto; height: auto;
+  padding: .5rem 1rem; background: #fff; color: #000;
+  border-radius: 4px; z-index: 999;
+}
+
+header {
+  display: flex; align-items: center; justify-content: space-between;
+  padding: 1rem 1.5rem;
+  background: linear-gradient(90deg,#071529 0%, #0d1f34 100%);
+  box-shadow: 0 4px 18px rgba(0,0,0,.6);
+}
+.brand { display: flex; gap: .8rem; align-items: center; }
+.logo {
+  width: 48px; height: 48px; border-radius: 50%;
+  background: conic-gradient(from 180deg,#ff8a00,#ff3b30);
+  display: flex; align-items: center; justify-content: center;
+  font-weight: 700; color: #fff;
+}
+h1 { font-size: 1.25rem; margin: 0; }
+nav { display: flex; gap: .5rem; }
+
+main { max-width: 1000px; margin: 1.25rem auto; padding: 1rem; }
+.grid { display: grid; grid-template-columns: 1fr 320px; gap: 1rem; }
+@media (max-width:880px) { .grid { grid-template-columns: 1fr; } }
+
+.card {
+  background: var(--card);
+  padding: 1rem; border-radius: 12px;
+  box-shadow: 0 6px 30px rgba(2,6,23,.6);
+}
+
+.a11y { display: flex; flex-direction: column; gap: .75rem; }
+.a11y h2 { font-size: 1rem; margin: 0 0 .25rem; }
+.note { margin: 0 0 .5rem; color: var(--muted); font-size: .95rem; }
+
+.controls { display: flex; gap: .5rem; flex-wrap: wrap; align-items: center; }
+.btn {
+  background: transparent; border: 1px solid rgba(255,255,255,.12);
+  padding: .5rem .75rem; border-radius: 8px;
+  color: var(--text); cursor: pointer; transition: background .2s;
+}
+.btn:hover { background: rgba(255,255,255,.1); }
+.btn:focus { outline: 3px solid rgba(255,138,0,.45); outline-offset: 3px; }
+
+input[type=range] { flex: 1; }
+
+.section { margin-bottom: 1.5rem; }
+.section h3 { margin-top: 0; color: var(--accent); }
+
+footer { padding: 1rem; text-align: center; color: var(--muted); }
+.tip { font-size: .9rem; color: var(--muted); }
+
+body.high-contrast {
+  --bg: #000; --card: #fff; --accent: #ff0; --text: #000; --muted: #333;
+}
+body.high-contrast .logo {
+  background: conic-gradient(from 180deg,#ff0,#fff); color: #000;
+}
+body.high-contrast .btn { border-color: #000; color: #000; }
+
+.aria-status {
+  position: fixed; left: -9999px; top: auto; height: 1px; width: 1px; overflow: hidden;
+}
