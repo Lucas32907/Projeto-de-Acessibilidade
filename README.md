@@ -9,10 +9,6 @@
   <link rel="stylesheet" href="style.css">
 </head>
 <body>
-  <a class="skip-link" href="#main">Pular para o conteúdo</a>
-  <header>
-    <div class="brand">
-      <div class="logo" aria-hidden="true">BB</div>
       <div>
         <h1>Projeto Basquete</h1>
         <div class="description">Tudo sobre o esporte e acessibilidade digital</div>
