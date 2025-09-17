@@ -5,7 +5,7 @@
 <head>
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width,initial-scale=1" />
-  <title>Projeto Basquete — Acessibilidade<title>
+  <h5>Projeto Basquete — Acessibilidade</h5>
   <link rel="stylesheet" href="style.css">
 </head>
 <body>
