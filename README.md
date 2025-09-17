@@ -85,7 +85,5 @@
   <footer>
     <small>© Projeto Basquete — Lucas Batista</small>
   </footer>
-
-  <script src="script.js"></script>
 </body>
 </html>
